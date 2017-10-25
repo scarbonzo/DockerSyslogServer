@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerSyslogServer.Data", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerSyslogServer.Listener", "DockerSyslogServer.Listener\DockerSyslogServer.Listener.csproj", "{6AAD0992-26BB-46D0-B23A-B072C32B15E6}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{994578D4-9600-4437-A92A-80CCEE3627F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6AAD0992-26BB-46D0-B23A-B072C32B15E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AAD0992-26BB-46D0-B23A-B072C32B15E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AAD0992-26BB-46D0-B23A-B072C32B15E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{994578D4-9600-4437-A92A-80CCEE3627F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994578D4-9600-4437-A92A-80CCEE3627F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994578D4-9600-4437-A92A-80CCEE3627F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994578D4-9600-4437-A92A-80CCEE3627F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

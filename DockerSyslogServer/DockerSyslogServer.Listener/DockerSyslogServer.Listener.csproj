@@ -9,4 +9,10 @@
     <ProjectReference Include="..\DockerSyslogServer.Data\DockerSyslogServer.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>
