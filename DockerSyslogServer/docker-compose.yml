@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  dockersyslogserver.listener:
+    image: dockersyslogserver.listener
+    build:
+      context: ./DockerSyslogServer.Listener
+      dockerfile: Dockerfile
