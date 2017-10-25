@@ -6,3 +6,9 @@ services:
     build:
       context: ./DockerSyslogServer.Listener
       dockerfile: Dockerfile
+
+  dockersyslogserver.api:
+    image: dockersyslogserver.api
+    build:
+      context: ./DockerSyslogServer.API
+      dockerfile: Dockerfile
