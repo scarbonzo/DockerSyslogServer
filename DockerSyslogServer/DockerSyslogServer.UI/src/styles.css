@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.padded {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.norowpad {
+  margin-bottom: 0px;
+}
+
+.datepicker {
+  z-index:99999 !important;
+}
+
+.button-wrapper {
+  background: darkorange;
+  display: table-cell;
+  vertical-align: middle;
+}

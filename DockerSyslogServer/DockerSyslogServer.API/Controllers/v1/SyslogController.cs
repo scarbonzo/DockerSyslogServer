@@ -31,7 +31,7 @@ namespace DockerSyslogServer.API.Controllers.v1
                     Collections.Add(name);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return Unauthorized();
             }
@@ -62,7 +62,7 @@ namespace DockerSyslogServer.API.Controllers.v1
                     .ToList();
 
             }
-            catch (Exception e){ }
+            catch { }
 
             return Ok(results);
         }

@@ -1,0 +1,54 @@
+<div class="">
+  <div id="filters" class="card light-blue darken-4 z-depth-5">
+    <div class="card-content">
+      <div class="row norowpad">
+        <div class="col s2">
+          <div class="orange-text">Source</div>
+          <select [(ngModel)]="selectedSource" class="browser-default">
+            <option [ngValue]="-1" disabled selected class="black-text">Select a Source</option>
+            <option *ngFor="let source of sources" [ngValue]="source">
+              {{source}}
+            </option>
+          </select>
+        </div>
+        <div class="col s1">
+          <div class="orange-text">Results Limit</div>
+          <div class="white-text">
+            <input class="browser-default" [(ngModel)]="resultSize">
+          </div>
+        </div>
+      </div>
+      <div class="row norowpad">
+        <div class="col s2">
+          <div class="orange-text">Start</div>
+          <owl-date-time inputStyleClass="white-text" dateFormat="YYYY/MM/DD HH:mm:ss" [(ngModel)]="start" [locale]="en"></owl-date-time>
+        </div>
+        <div class="col s2">
+          <div class="orange-text">End</div>
+          <owl-date-time inputStyleClass="white-text" dateFormat="YYYY/MM/DD HH:mm:ss" [(ngModel)]="end" [locale]="en"></owl-date-time>
+        </div>
+      </div>
+      <div class="row norowpad">
+        <div class="col s2">
+          <a class="waves-effect waves-light btn red" (click)="update()">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="results" class="card light-blue darken-4 z-depth-5 row">
+    <div class="card-content">
+      <table class="table">
+        <thead>
+          <th class="col s2 orange-text">Timestamp</th>
+          <th class="col s10 orange-text">Syslog Data</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let syslog of syslogs">
+              <td class="col s2 white-text">{{syslog.timestamp | date: 'medium'}}</td>
+              <td class="col s10 white-text">{{syslog.data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
