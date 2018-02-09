@@ -12,7 +12,7 @@ namespace DockerSyslogServer.API.Controllers.v1
     public class SyslogController : Controller
     {
         string Server = "mongodb://192.168.50.225";
-        string Database = "cisco_vg";
+        string Database = "syslogs";
 
         [HttpGet]
         [Route("api/v1/sources")]

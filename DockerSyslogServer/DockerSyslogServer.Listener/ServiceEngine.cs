@@ -9,17 +9,20 @@ using MongoDB.Driver;
 
 namespace DockerSyslogServer.Listener
 {
-    public class ServerEngine
+    public class SyslogServerEngine
     {
         string Server;
         string Database;
         int ListeningPort;
 
-        public ServerEngine(string Server = "localhost", string Database = "syslogs", int ListeningPort = 514)
+        public SyslogServerEngine(string Server = "localhost", string Database = "syslogs", int ListeningPort = 514)
         {
             this.Server = Server;
             this.Database = Database;
             this.ListeningPort = ListeningPort;
+
+            Console.WriteLine("DB Server: " + this.Server);
+            Console.WriteLine("DB Database: " + this.Database);
         }
 
         public void Listener()

@@ -8,7 +8,28 @@ namespace DockerSyslogServer.Listener
         {
             try
             {
-                ServerEngine engine = new ServerEngine("192.168.50.225","cisco_vg");
+                string dbserver = "localhost";
+                string database = "syslogs";
+
+                try
+                {
+                    if (args[0] != null)
+                    {
+                        dbserver = args[0];
+                    }
+                }
+                catch { }
+
+                try
+                {
+                    if (args[1] != null)
+                    {
+                        database = args[1];
+                    }
+                }
+                catch { }
+
+                SyslogServerEngine engine = new SyslogServerEngine(dbserver, database);
                 engine.Listener();
 
                 Console.WriteLine("Server is starting up...");

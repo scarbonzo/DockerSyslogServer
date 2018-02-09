@@ -4,7 +4,7 @@ namespace DockerSyslogServer.Data
 {
     public class Syslog
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime Timestamp { get; set; }
         public string Source { get; set; }
         public string Data { get; set; }
